@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+      <header>
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <img src="image/assist.png" alt="Logo Assist" />
+        <h1>Assist.id</h1>
+        <p>Solusi Digitalisasi Faskes Indonesia</p>
+      </header>
+      <div class="menu">
+        <div class="item">
+          <a href=""><i class="fas fa-desktop"></i>Dashboard</a>
+        </div>
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-calendar-check"></i>Penjadwalan
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="" class="sub-item">Sub Item 1</a>
+            <a href="" class="sub-item">Sub Item 2</a>
+            <a href="" class="sub-item">Sub Item 3</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-user-nurse"></i>Tenaga Kesehatan
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="" class="sub-item">Sub Item 1</a>
+            <a href="" class="sub-item">Sub Item 2</a>
+            <a href="" class="sub-item">Sub Item 3</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-notes-medical"></i>Pasien
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="" class="sub-item">Sub Item 1</a>
+            <a href="" class="sub-item">Sub Item 2</a>
+            <a href="" class="sub-item"
+              >Mau Mati
+              <i class="fas fa-skull"></i>
+            </a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-hand-holding-medical"></i>Obat/Tindakan
+            <i class="fas fa-angle-right dropdown"></i>
+          </a>
+          <div class="sub-menu">
+            <a href="" class="sub-item">Sub Item 1</a>
+            <a href="" class="sub-item">Sub Item 2</a>
+            <a href="" class="sub-item">Sub Item 3</a>
+          </div>
+        </div>
+        <div class="item">
+          <a href=""><i class="fas fa-laptop-medical"></i>Pembukuan</a>
+        </div>
+        <div class="item">
+          <a href=""><i class="fas fa-clinic-medical"></i>Tentang Klinik</a>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-cog"></i>Settings </a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-btn").click(function () {
+          $(".side-bar").addClass("active");
+          $(".menu-btn").css("visibility", "hidden");
+        });
+        $(".close-btn").click(function () {
+          $(".side-bar").removeClass("active");
+          $(".menu-btn").css("visibility", "visible");
+        });
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+    </script>
+  </body>
+</html>
